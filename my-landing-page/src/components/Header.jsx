@@ -1,50 +1,35 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react';
 
-const Nav = styled.nav`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 80px;
-  background: #fff;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-`;
-
-const Logo = styled.h1`
-  font-size: 24px;
-  font-weight: bold;
-  color: #007bff;
-`;
-
-const Menu = styled.ul`
-  list-style: none;
-  display: flex;
-  gap: 20px;
-`;
-
-const MenuItem = styled.li`
-  font-size: 18px;
-  cursor: pointer;
-  color: #333;
-  transition: 0.3s;
-
-  &:hover {
-    color: #007bff;
-  }
-`;
-
-function Header() {
+const Header = () => {
   return (
-    <Nav>
-      <Logo>LOGO</Logo>
-      <Menu>
-        <MenuItem>Home</MenuItem>
-        <MenuItem>About</MenuItem>
-        <MenuItem>Services</MenuItem>
-        <MenuItem>Contact</MenuItem>
-      </Menu>
-    </Nav>
+    <header className="fixed top-0 left-0 w-full z-50 flex items-center justify-between px-8 h-20 bg-white shadow-sm">
+      {/* Logo */}
+      <div className="text-2xl font-bold text-[#00A3E1]">
+        LOGO
+      </div>
+
+      {/* Navigation Menu */}
+      <nav className="flex items-center space-x-8">
+        <a href="/" className="text-gray-700 hover:text-[#00A3E1] transition-colors">
+          Home
+        </a>
+        <a href="/about" className="text-gray-700 hover:text-[#00A3E1] transition-colors">
+          About us
+        </a>
+        <a href="/services" className="text-gray-700 hover:text-[#00A3E1] transition-colors">
+          Services
+        </a>
+        <a href="/blog" className="text-gray-700 hover:text-[#00A3E1] transition-colors">
+          Blog
+        </a>
+       
+        {/* Contact Button */}
+        <button className="bg-[#00A3E1] text-white px-6 py-2 rounded hover:bg-[#0083B4] transition-colors">
+          Contact us
+        </button>
+      </nav>
+    </header>
   );
-}
+};
 
 export default Header;

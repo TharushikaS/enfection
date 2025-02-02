@@ -1,19 +1,24 @@
-import React from "react";
-import GlobalStyles from "./styles/GlobalStyles";
 import Header from "./components/Header";
-import HeroSection from "./components/HeroSection";
+import Hero from "./components/Hero";
+import Services from "./components/Services";
 import Features from "./components/Features";
+import CTA from "./components/CTA";
+import Logos from "./components/Company_logo";
 import Footer from "./components/Footer";
+import Newsletter from "./components/Newsletter";
 
 function App() {
   return (
-    <>
-      <GlobalStyles />
+    <div>
       <Header />
-      <HeroSection />
+      <Hero />
+      <Services />
       <Features />
+      <CTA />
+      <Logos />
+      <Newsletter />
       <Footer />
-    </>
+    </div>
   );
 }
 
